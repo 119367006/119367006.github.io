@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Services</title>
+		<style>		
+			body {
+			  background-color: #333;
+			}
+		
+			h1 {
+		      color: white;
+			}
+			
+			p {
+			  color: white;
+			}
+		
+			.navbar {
+			  width: 100%;
+			  background-color: #333;
+			  overflow: auto;
+			}
+
+			.navbar a {
+			  float: left;
+			  padding: 12px;
+			  color: white;
+			  text-decoration: none;
+			  font-size: 17px;
+			  width: 18.2%; 
+			  text-align: center;
+			}
+
+			.navbar a:hover {
+			  background-color: #000;
+			}
+
+			.navbar a.active {
+			  background-color: #2196F3;
+			}
+
+			@media screen and (max-width: 500px) {
+			  .navbar a {
+				float: none;
+				display: block;
+				width: 100%;
+				text-align: left;
+			  }
+			}
+			
+			h2 {
+			  color: white;
+			  text-align: center;
+			}
+			
+			.container {
+			  border-style: solid;
+			  padding: 0 10px;
+			  border-bottombottom: 200px;
+			  color: white;
+			  width: 16%;
+			  margin-left: auto;
+			  margin-right: auto;
+			  display: block;
+			}
+			
+			.style {
+			  display: block;
+			  position: relative;
+			  padding-left: 35px;
+			  margin-bottom: 12px;
+			  cursor: pointer;
+			  font-size: 22px;
+			  -webkit-user-select: none;
+			  -moz-user-select: none;
+			  -ms-user-select: none;
+			  user-select: none;
+			}
+
+			.style input {
+			  position: absolute;
+			  opacity: 0;
+			  cursor: pointer;
+			}
+
+			.checkmark {
+			  position: absolute;
+			  top: 0;
+			  left: 0;
+			  height: 25px;
+			  width: 25px;
+			  background-color: #eee;
+			  border-radius: 50%;
+			}
+			
+			.style:hover input ~ .checkmark {
+			  background-color: #ccc;
+			}
+
+			.style input:checked ~ .checkmark {
+			  background-color: #2196F3;
+			}
+
+			.checkmark:after {
+			  content: "";
+			  position: absolute;
+			  display: none;
+			}
+
+			.style input:checked ~ .checkmark:after {
+			  display: block;
+			}
+
+			.style .checkmark:after {
+			  top: 9px;
+		      left: 9px;
+			  width: 8px;
+			  height: 8px;
+		      border-radius: 50%;
+			  background: white;
+			}
+			
+			.calcButton {
+			  background-color: #2196F3; 
+			  border-radius: 12px;
+			  border: none;
+			  color: white;
+			  padding: 20px;
+			  text-align: center;
+			  text-decoration: none;
+			  display: inline-block;
+			  font-size: 16px;
+			  margin: 4px 2px;
+			  cursor: pointer;
+			  position: relative;
+			  float: left;
+			  width: 48%;
+			  
+			}
+			
+			.purchButton {
+			  background-color: #2196F3; 
+			  border-radius: 12px;
+			  border: none;
+			  color: white;
+			  padding: 20px;
+			  text-align: center;
+			  text-decoration: none;
+			  display: inline-block;
+			  font-size: 16px;
+			  margin: 4px 2px;
+			  cursor: pointer;
+			  position: relative;
+			  width: 48%;
+			  
+			}
+		</style>
+
+		<script>
+			var argSelection = 0;
+			var argDiscount, argVat, argPrice;
+			
+			function calcSub() {
+				if (Hyperautomation.checked == true){
+				argSelection = Hyperautomation.value;
+				}
+				else if (Multiexperience.checked == true){
+				argSelection = Multiexperience.value;
+				}
+				else if (DistributedCloud.checked == true){
+				argSelection = DistributedCloud.value;
+				}
+				calcVatTotal(argSelection);
+			}
+			
+			function calcVatTotal(parmSelection){
+				argDiscount = 0.05 * parmSelection;
+				argVat = 0.2 * parmSelection;
+				argPrice = parmSelection -argDiscount +argVat;
+				calcDisp();
+			}
+			
+			function calcDisp() {
+				document.getElementById("subtotal").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbspSubtotal: " + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp€" + argSelection;
+				document.getElementById("discount").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbspDiscount @ 5%: " + "&nbsp&nbsp- €" + argDiscount.toFixed(2);
+				document.getElementById("vat").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbspVat @ 20%: " + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp€" + argVat.toFixed(2);
+				document.getElementById("total").innerHTML = "&nbsp&nbsp&nbsp&nbsp&nbspTotal: " + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp€"+ argPrice.toFixed(2);							
+			}
+			
+			function purchase() {
+				if (confirm("Would you like to confirm this purchase?")) {
+			      alert("Your order has been placed.");
+				  }
+				}
+</script>
+		</script>
+	</head>
+	
+	<body>
+	
+		<div class="navbar">
+		  <a href="Home.html">Home</a> 
+		  <a href="CV.html">CV</a> 
+		  <a href="Interests.html">Interests</a> 
+		  <a href="Consulting.html">MajorConsultingLtd</a>
+		  <a class="active" href="Ebus1.html">E-Business</a>
+		</div>
+		
+		<br />
+		<br />
+	
+		<h1 style="text-align:center;">E-Business</h1>
+		
+		<br />	
+		
+		<div class="container">
+				<h2>Select a Consulting Service</h2>
+				<br />
+				<label class="style" for="Hyperautomation"><input type="radio" id="Hyperautomation" name="cost" value="200.00" class="input">
+				<span class="checkmark"></span><span class="text">Hyperautomation</span></label><br>
+				<br />
+				<label class="style" for="Multiexperience"><input type="radio" id="Multiexperience" name="cost" value="500.00" class="input">
+				<span class="checkmark"></span><span class="text">Multiexperience</span></label><br>
+				<br />
+				<label class="style" for="DistributedCloud"><input type="radio" id="DistributedCloud" name="cost" value="1000.00" class="input">
+				<span class="checkmark"></span><span class="text">Distributed Cloud</span></label><br>
+				<br />
+				<p id="subtotal"></p>
+				<p id="discount"></p>
+				<p id="vat"></p>
+				<br />
+				<p id="total"></p>
+				<input class="calcButton" type="button" id="btnCalculate" value="Calculate" onclick="calcSub()">
+				<input class="purchButton" type="button" id="btnCalculate" value="Purchase" onclick="purchase()">
+		</div>
+	</body>	
+</html>

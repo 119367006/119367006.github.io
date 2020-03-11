@@ -5,7 +5,12 @@
 	
 		<title>My CV</title>
 		
-		<style>		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+		integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+		crossorigin="anonymous">
+		<link rel="stylesheet" href=" style.css">
+		
+		<style>
 			body {
 			  background-color: #333;
 			}
@@ -14,60 +19,76 @@
 		      color: white;
 			}
 			
-			h3 {
-		      color: white;
-			}
-			
 			p {
 			  color: white;
 			}
-		
-			ul {
-			  list-style-type: none;
-			  margin: 0;
-			  padding: 0;
-			  overflow: hidden;
-			  background-color: #333;
-			  position: fixed;
-			  top: 0;
-			  width: 100%;
-		    }
 
-			li {
-			  float: left;
+			.navbar {
+			  width: 100%;
+			  background-color: #333;
+			  overflow: auto;
 			}
 
-			li a {
+			.navbar a {
+			  float: left;
+			  padding: 12px;
+			  color: white;
+			  text-decoration: none;
+			  font-size: 17px;
+			  width: 18.2%; 
+			  text-align: center;
+			}
+
+			.navbar a:hover {
+			  background-color: #000;
+			}
+
+			.navbar a.active {
+			  background-color: #2196F3;
+			}
+
+			@media screen and (max-width: 500px) {
+			  .navbar a {
+				float: none;
+				display: block;
+				width: 100%;
+				text-align: left;
+			  }
+			}
+			
+			h3 {
+			  width: 100%;
+			  margin-left: auto;
+			  margin-right: auto;
+			  display: block;
+			}
+	
+			.div {
+			  width: 70%;
+			  margin-left: auto;
+			  margin-right: auto;
+			  margin-bottom: 50px
 			  display: block;
 			  color: white;
-			  text-align: center;
-			  padding: 14px 16px;
-			  text-decoration: none;
-			}
-
-			li a:hover:not(.active) {
-			  background-color: #111;
-			}
-
-			.active {
-			  background-color: #4CAF50;
 			}
 			
 			table {
-			  background-color: white;
+			  table-layout: fixed;
+			  color: white;
+			  background-color: black;
 			}
-		</style>
+		</style>	
 	</head>
 	
 	<body>
 	
-		<ul>
-		  <li><a href="Project.html">Home</a></li>
-		  <li><a class="active" href="CV.html">CV</a></li>
-		  <li><a href="Interests.html">Interests</a></li>
-		  <li><a href="Consulting.html">MajorConsultingLtd</a></li>
-		  <li><a href="Services.html">Services</a></li>
-		</ul>
+		<div class="navbar">
+		  <a href="Home.html">Home</a> 
+		  <a class="active" href="CV.html">CV</a> 
+		  <a href="Interests.html">Interests</a> 
+		  <a href="Consulting.html">MajorConsultingLtd</a>
+		  <a href="Ebus1.html">E-Business</a>
+		</div>
 		
 		<br />
 		<br />
@@ -81,58 +102,84 @@
 			<p style="text-align:center;"><b>Email Address: </b>119367006@umail.ucc.ie</p>
 		</div>
 		
-		
-		<h3>About Myself</h3>
-		
-		<div>
-			<p>My name is Adam Sherif and I am currently in my 1st Year attending University College Cork, studying Business Information Systems.</p>		
-		</div>
-		
 		<br />
 		
-		<h3>Education</h3>
+		<div class="div">	
+			<h3 class="h3">About Myself</h3>
+			<p>My name is Adam Sherif and I am currently in my 1st Year attending University College Cork, studying Business Information Systems.
+			   I have a passion for both IT and Business, and so my choice of course was obvious. I am determined and hard-working, and will commit
+			   to finding a solution to any problem that I may come accross. I'm also very enthusiastic about work, and love getting things done.</p>		
+		</div>
 		
-		<div>
+		<br />	
+		
+		<div class="div">
+			<h3 class="h3">Education</h3>
 			<p>I first attended Secondary School in Belgium at the European School of Brussels III. I was there for 2 years before moving back
 			   to Cork, where I attended Coláiste an Spioraid Naoimh in Bishopstown. It was there that I carried out the remainder of my education
 			   and sat the Leaving Certificate. My results were as follows:</p>
-			   
-			    <table border="1">
+		</div>
+		
+		<div class="table">
+			    <table border="2" align="center">
 				   <thead>
 					   <tr>
 						   <th>Subjext</th>
+						   <th>Level</th>
 						   <th>Grade</th>
 					   </tr>
 				   </thead>
 				   <tbody>
 					   <tr>
-						   <td>French<td>
-						   <td>H2<td>
+						   <td>French</td>
+						   <td>Higher</td>
+						   <td>H2</td>
 					   </tr>
 					   <tr>
-						   <td>English<td>
-						   <td>H2<td>
+						   <td>English</td>
+						   <td>Higher</td>
+						   <td>H2</td>
 				       </tr>
 				       <tr>
-						   <td>Business<td>
-						   <td>H3<td>
+						   <td>Business</td>
+						   <td>Higher</td>
+						   <td>H3</td>
 				       </tr>
 				       <tr>
-						   <td>Economics<td>
-						   <td>H4<td>
+						   <td>Economics</td>
+						   <td>Higher</td>
+						   <td>H4</td>
 				       </tr>
 				       <tr>
-						   <td>Irish<td>
-						   <td>H5<td>
+						   <td>Irish</td>
+						   <td>Higher</td>
+						   <td>H5</td>
 				       </tr>
 				       <tr>
-						   <td>Maths<td>
-						   <td>H6<td>
+						   <td>Maths</td>
+						   <td>Higher</td>
+						   <td>H6</td>
 				       </tr>
 			       </tbody>
 		        </table>
-			  
-			 <p>
+		</div>  
+		
+		<div class="div">
+			<p>As you can see, my results were quite balanced, and I received a total of 446 points.</p>
+		</div>
+		
+		<br />
+		
+		<div class="div">
+			<h3 class="h3">Work Experience</h3>
+			<p>Transition Year Work: 2 weeks in an office environment for Bord Gáis.</p>
+			<p>Transition Year Work: 2 weeks in a Primary School in Ballyphehane.</p>
+			<p>Worked in Supervalu for close to 2 years.</p>
+			<p>Worked in KFC for 5 months.</p>
+			<p>Currently working in Sports Direct, having started last year.</p>
+		</div>
+		
+			 
 		
 		
 	</body>

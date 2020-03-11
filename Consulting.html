@@ -16,49 +16,66 @@
 			  color: white;
 			}
 		
-			ul {
-			  list-style-type: none;
-			  margin: 0;
-			  padding: 0;
-			  overflow: hidden;
-			  background-color: #333;
-			  position: fixed;
-			  top: 0;
+			.navbar {
 			  width: 100%;
-		    }
+			  background-color: #333;
+			  overflow: auto;
+			}
 
-			li {
+			.navbar a {
 			  float: left;
-			}
-
-			li a {
-			  display: block;
+			  padding: 12px;
 			  color: white;
-			  text-align: center;
-			  padding: 14px 16px;
 			  text-decoration: none;
+			  font-size: 17px;
+			  width: 18.2%; 
+			  text-align: center;
 			}
 
-			li a:hover:not(.active) {
-			  background-color: #111;
+			.navbar a:hover {
+			  background-color: #000;
 			}
 
-			.active {
-			  background-color: #4CAF50;
+			.navbar a.active {
+			  background-color: #2196F3;
+			}
+
+			@media screen and (max-width: 500px) {
+			  .navbar a {
+				float: none;
+				display: block;
+				width: 100%;
+				text-align: left;
+			  }
 			}
 			
+			.div {
+			  width: 70%;
+			  margin-left: auto;
+			  margin-right: auto;
+			  margin-bottom: 50px;
+			  display: block;		  
+			}
+			
+			h3 {
+			  width: 100%;
+			  margin-left: auto;
+			  margin-right: auto;
+			  display: block;
+			  color: white;
+			}
 		</style>
 	</head>
 	
 	<body>
 	
-		<ul>
-		  <li><a href="Project.html">Home</a></li>
-		  <li><a href="CV.html">CV</a></li>
-		  <li><a href="Interests.html">Interests</a></li>
-		  <li><a class="active" href="Consulting.html">MajorConsultingLtd</a></li>
-		  <li><a href="Services.html">Services</a></li>
-		</ul>
+		<div class="navbar">
+		  <a href="Home.html">Home</a> 
+		  <a href="CV.html">CV</a> 
+		  <a href="Interests.html">Interests</a> 
+		  <a class="active" href="Consulting.html">MajorConsultingLtd</a>
+		  <a href="Ebus1.html">E-Business</a>
+		</div>
 		
 		<br />
 		<br />
@@ -66,14 +83,36 @@
 		<h1 style="text-align:center;">About MajorConsultingLtd</h1>
 		
 		<p style="text-align:center;"><b>Email: </b>majorconsulting@gmail.com</p>
-		<p style="text-align:center;"><b>Phone Number: </b>021537841</p>
+		<p style="text-align:center;"><b>Phone Number: </b>***********</p>
+		<p style="text-align:center;"><b>Address: </b>** ******* ******</p>
 		<p style="text-align:center;">&nbsp&nbsp&nbsp&nbsp<b>Office Hours: </b>Monday - Thursday, 09:00-18:00</p>
 		<p style="text-align:center;">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Friday - Saturday, 10:00-16:00</p>
 		<p style="text-align:center;" left:>Sunday, Closed</p>
 		
-		<div class="container">
-		<p>We are MajorConsultingLtd. We provide top quality consulting offerings to the market. We are made up of former market veterans who can
-		   provide great insight into its inner workings secrets.</p>
+		<br />
+		<br />
+		
+		<div class="div">
+			<p>We are MajorConsultingLtd. We provide top quality consulting offerings to the market. We are made up of former market veterans who can
+			   provide great insight into its inner workings and secrets. Here are just a few of the topics we provide services for:</p>
+			   
+			<h3>Hyperautomation</h3>
+			<p>Hyperautomation is the application of advanced technologies like RPA, Artificial Intelligence, machine learning (ML) and Process Mining
+			   to augment workers and automate processes in ways that are significantly more impactful than traditional automation capabilities.
+			   Hyperautomation is the combination of automation tools to deliver work. Click <a href="https://blog.datarobot.com/what-is-hyperautomation">here</a>
+			   to learn more.</p>
+			
+			<h3>Multiexperience</h3>
+			<p>Multiexperience refers to the various permutations of modalities (e.g., touch, voice and gesture), devices and apps that users interact with
+			   on their digital journey across the various touchpoints. Multiexperience development involves creating fit-for-purpose apps based on touchpoint-specific
+			   modalities, while at the same time ensuring a consistent user experience across web, mobile, wearable, conversational and immersive touchpoints.
+			   Click <a href="https://techhq.com/2019/11/why-businesses-are-developing-multiexperience/">here</a> to learn more.</p>
+			
+			<h3>Distributed Cloud</h3>
+			<p>Distributed cloud is the application of cloud computing technologies to interconnect data and applications served from multiple geographic locations.
+               Distributed, in an information technology (IT) context, means that something is shared among multiple systems which may also be in different locations.
+			   Distributed cloud speeds communications for global services and enables more responsive communications for specific regions.
+			   Click <a href="https://interestingengineering.com/next-generation-of-cloud-computing-distributed-cloud">here</a> to learn more.</p>
 		</div>
 
 		
